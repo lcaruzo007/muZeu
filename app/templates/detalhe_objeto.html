@@ -13,7 +13,13 @@
                   alt="Modelo 3D de {{ objeto.nome }}"
                   auto-rotate
                   camera-controls
-                  style="width: 100%; height: 500px;">
+                  style="width: 100%; height: 500px; border: 1px solid black;"></model-viewer>
     </model-viewer>
 </body>
 </html>
+<script>
+    // Adiciona o evento de clique para abrir o modelo 3D em tela cheia
+    document.querySelector('model-viewer').addEventListener('click', function() {
+        this.enterFullscreen();
+    });
+</script>
